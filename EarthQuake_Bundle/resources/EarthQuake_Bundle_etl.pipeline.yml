@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    EarthQuake_Bundle_etl:
+      name: EarthQuake_Bundle_Prod
+      configuration:
+        catalog_name: ${var.catalog}
+      libraries:
+        - glob:
+            include: ../src/DLT_pipelines/Standardization/transformations/**
+      schema: silver
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: ${var.catalog}
+      serverless: true
+      root_path: ../src/DLT_Pipeline/Standardization

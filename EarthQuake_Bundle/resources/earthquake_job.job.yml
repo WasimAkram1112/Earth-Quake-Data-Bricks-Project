@@ -1,7 +1,7 @@
 resources:
   jobs:
     EarthQuake_Job:
-      name: EarthQuake_Job
+      name: EarthQuake_Job_Prod
       tasks:
         - task_key: Data_Ingestion
           notebook_task:
@@ -22,7 +22,9 @@ resources:
             subscription: {}
             warehouse_id: 3155f770daac267c
             dashboard_id: ${resources.dashboards.earthquake_monitor.id}
-
+      run_as:
+        service_principal_name: ${var.spn_id}
+        
       queue:
         enabled: true
       parameters:

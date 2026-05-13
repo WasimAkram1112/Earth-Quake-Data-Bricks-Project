@@ -14,4 +14,6 @@ resources:
       channel: CURRENT
       catalog: ${var.catalog}
       serverless: true
+      run_as:
+        service_principal_name: ${var.spn_id}
       root_path: ../src/DLT_Pipeline/Standardization

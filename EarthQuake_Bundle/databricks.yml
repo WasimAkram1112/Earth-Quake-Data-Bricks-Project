@@ -32,7 +32,7 @@ targets:
       catalog: earthquake_catalog_dev
       schema: dev
       warehouse_id: 3155f770daac267c
-      spn_id: ""
+      spn_id: "c5ed63c4-b273-4550-b24d-34a6799ffad9"
     presets:
       artifacts_dynamic_version: true
   prod:
@@ -40,12 +40,15 @@ targets:
     workspace:
       host: https://dbc-41fc0b12-8956.cloud.databricks.com
       # We explicitly deploy to /Workspace/Users/wasimakramb325@gmail.com to make sure we only have a single copy.
-      root_path: /Workspace/Users/wasimakramb325@gmail.com/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Workspace/PROD_Earth-Quake-Data-Bricks-Project
+
     variables:
       catalog: earthquake_catalog_prod
       schema: prod
       warehouse_id: 3155f770daac267c
-      spn_id: ""
+      spn_id: "c5ed63c4-b273-4550-b24d-34a6799ffad9"
     permissions:
       - user_name: wasimakramb325@gmail.com
+        level: CAN_MANAGE
+      - group_name: earthquake_prod_writer
         level: CAN_MANAGE

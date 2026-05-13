@@ -40,7 +40,7 @@ targets:
     workspace:
       host: https://dbc-41fc0b12-8956.cloud.databricks.com
       # We explicitly deploy to /Workspace/Users/wasimakramb325@gmail.com to make sure we only have a single copy.
-      root_path: /Workspace/PROD_Earth-Quake-Data-Bricks-Project
+      root_path: /Workspace/Earth-Quake-Data-Bricks-Project
 
     variables:
       catalog: earthquake_catalog_prod

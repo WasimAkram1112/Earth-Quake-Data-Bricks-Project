@@ -19,6 +19,8 @@ It also showcases automation with Databricks Jobs and deployment with Asset Bund
 
 The project follows the Medallion Architecture:
 
+<img width="607" height="341" alt="image" src="https://github.com/user-attachments/assets/baaa76d0-ff75-4fc7-a925-47347b0c4d48" />
+
 - **Bronze Layer**: Raw ingestion from REST API stored as JSON in Volumes
 - **Silver Layer**:Cleaned & structured Delta Tables using DLT pipelines
 - **Gold Layer**: (Optional) Aggregated business-ready tables for analytics
